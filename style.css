@@ -1,0 +1,39 @@
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+	width: 960px;
+	margin: auto;
+	padding: 20px;
+	background-color: rgba(146, 173, 176, 0.685);
+}
+
+.square{
+	flex: 1 1 60px;
+	background-color: red;
+	width: 60px;
+	height: 60px;
+}
+
+.hovered{
+	background-color: blue;
+}
+
+body{
+	background-color: rgb(54, 69, 79);
+}
+
+.size-change-button{
+	display: block;
+	margin: auto;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	padding: 8px 20px;
+	border-radius: 20px;
+	border-style: none;
+	background-color: rgba(48, 176, 65, 1);
+}
+
+.size-change-button:hover{
+	cursor: pointer;
+	background-color: rgba(48, 176, 65, 0.5);
+}
