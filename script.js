@@ -1,3 +1,4 @@
+let size = 16;
 function getRandomRGBVal() {
   return Math.floor(Math.random() * 256);
 }
@@ -11,7 +12,7 @@ function renderGrid(size){
 	document.querySelector('.js-flex-container').innerHTML = html;
 
 	document.querySelectorAll('.js-square').forEach((square)=>{
-		square.addEventListener('mouseleave', ()=>{
+		square.addEventListener('mouseleave', (event)=>{
 			if(!square.classList.contains('hovered')){
 				square.style.backgroundColor = `rgb(${getRandomRGBVal()}, ${getRandomRGBVal()}, ${getRandomRGBVal()})`;
 				square.classList.add('hovered');
@@ -23,10 +24,14 @@ function renderGrid(size){
 	});
 }
 
-renderGrid(16);
+renderGrid(size);
 
 
 document.querySelector('.js-size-change-button').addEventListener('click', ()=>{
-	let size = prompt('Choose a size for the new grid!', 0);
-	(Number(size) && Number(size) > 0 && Number(size) <= 100) ? renderGrid(Number(size)) : renderGrid(16);
+	size = prompt('Choose a size for the new grid!', 0);
+	(Number(size) && Number(size) > 0 && Number(size) <= 100) ? renderGrid(Number(size)) : renderGrid(size = 16);
+});
+
+document.querySelector('.js-reset-canvas').addEventListener('click', ()=>{
+	renderGrid(size);
 });

@@ -27,6 +27,22 @@ body{
 	background-color: rgba(48, 176, 65, 1);
 }
 
+.reset-canvas{
+	display: block;
+	margin: auto;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	padding: 8px 20px;
+	border-radius: 20px;
+	border-style: none;
+	background-color: rgb(168, 56, 56);
+}
+
+.reset-canvas:hover{
+	cursor: pointer;
+	background-color: rgba(168, 56, 56, 0.5);
+}
+
 .size-change-button:hover{
 	cursor: pointer;
 	background-color: rgba(48, 176, 65, 0.5);
