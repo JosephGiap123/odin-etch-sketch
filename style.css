@@ -8,15 +8,9 @@
 }
 
 .square{
-	flex: 1 1 60px;
 	background-color: red;
-	width: 60px;
-	height: 60px;
 }
 
-.hovered{
-	background-color: blue;
-}
 
 body{
 	background-color: rgb(54, 69, 79);
